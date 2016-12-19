@@ -1,0 +1,40 @@
+PATH
+  remote: .
+  specs:
+    versi (0.1.0)
+      clamp (= 1.1.1)
+      interactor (= 3.1.0)
+      semantic (= 1.4.1)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    byebug (9.0.6)
+    clamp (1.1.1)
+    diff-lcs (1.2.5)
+    interactor (3.1.0)
+    rspec (3.5.0)
+      rspec-core (~> 3.5.0)
+      rspec-expectations (~> 3.5.0)
+      rspec-mocks (~> 3.5.0)
+    rspec-core (3.5.4)
+      rspec-support (~> 3.5.0)
+    rspec-expectations (3.5.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.5.0)
+    rspec-mocks (3.5.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.5.0)
+    rspec-support (3.5.0)
+    semantic (1.4.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  byebug
+  rspec
+  versi!
+
+BUNDLED WITH
+   1.13.6
