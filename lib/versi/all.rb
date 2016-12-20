@@ -7,3 +7,4 @@ require "versi/errors/unknown_release_type_error"
 require "versi/transients/git_tag"
 
 require "versi/generate_command"
+require "versi/branch_command"

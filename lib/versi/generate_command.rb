@@ -11,8 +11,9 @@ class Versi < Clamp::Command
 
     def execute
       validate
-      if options[:debug]
+      if debug?
         context = Versi::GenerateCommand::Interactors::BuildReleaseTag.call(options: options)
+        Versi::LOG.info("No tag will be created, because we are in debug mode")
       else
         context = Versi::GenerateCommand::Interactors::GenerateCommandRelease.call(options: options)
       end
@@ -35,8 +36,7 @@ class Versi < Clamp::Command
         name:    name,
         prefix:  prefix,
         message: message,
-        remote:  remote,
-        debug:   debug? }
+        remote:  remote }
     end
   end
 end

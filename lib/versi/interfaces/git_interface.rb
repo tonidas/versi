@@ -8,7 +8,7 @@ class Versi < Clamp::Command
       GIT_FETCH_TAGS_COMMAND = "git fetch --tags"
       GIT_LAST_COMMIT_MSG_COMMAND = "git log -1 --pretty=%B"
 
-      def initialize(remote:)
+      def initialize(remote: DEFAULT_REMOTE)
         remote ||= DEFAULT_REMOTE
         @remote = remote
       end
@@ -45,6 +45,11 @@ class Versi < Clamp::Command
       
       def last_commit_message
         System.call!(GIT_LAST_COMMIT_MSG_COMMAND).stdout
+      end
+      
+      def create_branch(branch_name)
+        Versi::LOG.info("Creating branch #{branch_name}.. ")
+        System.call!("git checkout -b #{branch_name}")
       end
     end
   end
