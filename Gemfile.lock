@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    versi (0.1.0)
+    versi (0.3.0)
       clamp (= 1.1.1)
       interactor (= 3.1.0)
       semantic (= 1.4.1)

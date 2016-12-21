@@ -40,7 +40,7 @@ class Versi < Clamp::Command
 
       def list_tags
         response = System.call!(GIT_TAG_LIST_COMMAND)
-        response.stdout.split("\n")
+        response.stdout
       end
       
       def last_commit_message

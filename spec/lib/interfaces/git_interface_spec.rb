@@ -49,7 +49,7 @@ describe Versi::Interfaces::GitInterface do
   describe "#list_tags" do
     it "should call the git tag --list command" do
       expect(System).to receive(:call!).with("git tag --list").
-        and_return(double(stdout: "a\nb\nc"))
+        and_return(double(stdout: ["a", "b", "c"]))
       expect(subject.list_tags).to eq(["a", "b", "c"])
     end
   end

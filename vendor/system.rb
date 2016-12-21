@@ -15,14 +15,12 @@ class System
           until (line = stdout.gets).nil? do
             result.stdout << line
           end
-          result.stdout = result.stdout.join("\n")
         end
 
         Thread.new do
           until (line = stderr.gets).nil? do
             result.stderr << line
           end
-          result.stderr = result.stderr.join("\n")
         end
 
         thread.join
